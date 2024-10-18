@@ -1,0 +1,89 @@
+:root {
+    --primary: #eaeaea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    background: #222;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+}
+
+ nav a {
+    font-size: 1.4rem;
+    color: aliceblue;
+    padding: 0.5rem;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+
+#info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10rem;
+    font-weight: 700;
+    animation: jedagJedug .5s infinite;
+}
+
+@keyframes jedagJedug {
+    0% {
+        font-size: 1.5rem;
+    }
+    50% {
+        font-size: 2rem;
+    }
+    100% {
+        font-size: 1.5rem;
+    }
+}
